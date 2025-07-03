@@ -2,8 +2,9 @@
 
 # dependencies
 /node_modules
-/.pnp
-.pnp.*
+/.pnpm
+/.pnpm.*
+/.pnpm-store
 .yarn/*
 !.yarn/patches
 !.yarn/plugins
@@ -14,6 +15,7 @@
 /coverage
 
 # next.js
+/.vscode/
 /.next/
 /out/
 
@@ -31,7 +33,7 @@ yarn-error.log*
 .pnpm-debug.log*
 
 # env files (can opt-in for committing if needed)
-.env*
+.env
 
 # vercel
 .vercel
