@@ -1,10 +1,19 @@
+import { LocaleSwitcherSelect } from "@/components";
+import { useTranslations } from "next-intl";
+
+import "@/styles/app.css"
+
+
 export default function Home() {
+  const t = useTranslations();
   return (
     <div className="container mx-auto px-4 py-8">
+      <LocaleSwitcherSelect />
       <h1 className="text-3xl font-bold mb-6">Tailwind Components Demo</h1>
 
       {/* Button Components */}
       <section className="mb-8">
+        <p>{t("hello")}</p>
         <h2 className="text-2xl font-semibold mb-4">Button Components</h2>
         <div className="flex flex-wrap gap-3">
           <button className="btn btn-primary">Primary Button</button>

@@ -1,31 +1,25 @@
-/* Button component styles using Tailwind */
+@import "tailwindcss";
 
-/* Base button style */
-.btn {
+.btn {  
   @apply inline-flex items-center justify-center px-4 py-2 rounded-md font-medium transition-colors duration-200 ease-in-out focus:outline-none focus:ring-2 focus:ring-offset-2;
 }
 
-/* Primary button */
 .btn-primary {
   @apply bg-blue-600 text-white hover:bg-blue-700 focus:ring-blue-500;
 }
 
-/* Secondary button */
 .btn-secondary {
   @apply bg-gray-200 text-gray-800 hover:bg-gray-300 focus:ring-gray-500;
 }
 
-/* Success button */
 .btn-success {
   @apply bg-green-600 text-white hover:bg-green-700 focus:ring-green-500;
 }
 
-/* Danger button */
 .btn-danger {
   @apply bg-red-600 text-white hover:bg-red-700 focus:ring-red-500;
 }
 
-/* Button sizes */
 .btn-sm {
   @apply text-sm px-3 py-1;
 }
@@ -34,7 +28,6 @@
   @apply text-lg px-5 py-3;
 }
 
-/* Outlined variants */
 .btn-outline-primary {
   @apply border border-blue-600 text-blue-600 bg-transparent hover:bg-blue-50;
 }
