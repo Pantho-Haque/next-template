@@ -1,103 +1,132 @@
-import Image from "next/image";
-
 export default function Home() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm/6 text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-[family-name:var(--font-geist-mono)] font-semibold">
-              app/page.tsx
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
+    <div className="container mx-auto px-4 py-8">
+      <h1 className="text-3xl font-bold mb-6">Tailwind Components Demo</h1>
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+      {/* Button Components */}
+      <section className="mb-8">
+        <h2 className="text-2xl font-semibold mb-4">Button Components</h2>
+        <div className="flex flex-wrap gap-3">
+          <button className="btn btn-primary">Primary Button</button>
+          <button className="btn btn-secondary">Secondary Button</button>
+          <button className="btn btn-success">Success Button</button>
+          <button className="btn btn-danger">Danger Button</button>
+          <button className="btn btn-primary btn-sm">Small Button</button>
+          <button className="btn btn-outline-primary">Outline Button</button>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
+      </section>
+
+      {/* Card Components */}
+      <section className="mb-8">
+        <h2 className="text-2xl font-semibold mb-4">Card Components</h2>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="card">
+            <div className="card-header">
+              <h3 className="card-title">Basic Card</h3>
+              <p className="card-subtitle">Card subtitle</p>
+            </div>
+            <div className="card-body">
+              <p>This is a basic card component created with Tailwind CSS.</p>
+            </div>
+            <div className="card-footer">
+              <button className="btn btn-primary">Learn More</button>
+            </div>
+          </div>
+
+          <div className="card card-primary card-hover">
+            <div className="card-header">
+              <h3 className="card-title">Primary Card</h3>
+              <p className="card-subtitle">With hover effect</p>
+            </div>
+            <div className="card-body">
+              <p>This card has a primary style and hover effect.</p>
+            </div>
+            <div className="card-footer">
+              <button className="btn btn-outline-primary">View Details</button>
+            </div>
+          </div>
+
+          <div className="card card-success">
+            <div className="card-header">
+              <h3 className="card-title">Success Card</h3>
+            </div>
+            <div className="card-body">
+              <p>This is a success variant of the card component.</p>
+            </div>
+            <div className="card-footer">
+              <button className="btn btn-success">Confirm</button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Form Components */}
+      <section className="mb-8">
+        <h2 className="text-2xl font-semibold mb-4">Form Components</h2>
+        <div className="max-w-md">
+          <div className="form-group">
+            <label htmlFor="name" className="form-label">
+              Name
+            </label>
+            <input
+              type="text"
+              id="name"
+              className="form-input"
+              placeholder="Enter your name"
+            />
+          </div>
+
+          <div className="form-group">
+            <label htmlFor="email" className="form-label">
+              Email
+            </label>
+            <input
+              type="email"
+              id="email"
+              className="form-input form-input-valid"
+              placeholder="example@email.com"
+            />
+            <p className="form-feedback form-feedback-valid">Email is valid</p>
+          </div>
+
+          <div className="form-group">
+            <label htmlFor="password" className="form-label">
+              Password
+            </label>
+            <input
+              type="password"
+              id="password"
+              className="form-input form-input-invalid"
+            />
+            <p className="form-feedback form-feedback-invalid">
+              Password must be at least 8 characters
+            </p>
+          </div>
+
+          <div className="form-group">
+            <label htmlFor="country" className="form-label">
+              Country
+            </label>
+            <select id="country" className="form-select">
+              <option value="">Select a country</option>
+              <option value="us">United States</option>
+              <option value="ca">Canada</option>
+              <option value="uk">United Kingdom</option>
+            </select>
+          </div>
+
+          <div className="form-group">
+            <div className="flex items-center">
+              <input type="checkbox" id="terms" className="form-checkbox" />
+              <label htmlFor="terms" className="form-check-label">
+                I agree to the terms
+              </label>
+            </div>
+          </div>
+
+          <button className="btn btn-primary w-full">Submit Form</button>
+        </div>
+      </section>
     </div>
   );
 }

@@ -1,0 +1,30 @@
+/* Layout styles using Tailwind's @apply directive */
+
+@layer components {
+  /* Main container */
+  .container-main {
+    @apply p-5 rounded-2xl;
+  }
+
+  /* Dashboard layout */
+  .dashboard-container {
+    @apply grid grid-cols-1 md:grid-cols-12 gap-4;
+  }
+
+  .dashboard-sidebar {
+    @apply md:col-span-3 lg:col-span-2;
+  }
+
+  .dashboard-content {
+    @apply md:col-span-9 lg:col-span-10;
+  }
+
+  /* Page headers */
+  .page-header {
+    @apply mb-6;
+  }
+
+  .dashboard-title {
+    @apply text-2xl font-bold;
+  }
+}

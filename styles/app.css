@@ -1,0 +1,50 @@
+/* Component styles using Tailwind's @apply directive */
+
+/* Button styles */
+@layer components {
+  /* Primary button */
+  .btn-primary {
+    @apply bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2;
+  }
+
+  /* Secondary button */
+  .btn-secondary {
+    @apply bg-gray-200 text-gray-800 px-4 py-2 rounded-md hover:bg-gray-300 focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-offset-2;
+  }
+
+  /* Success button */
+  .btn-success {
+    @apply bg-green-600 text-white px-4 py-2 rounded-md hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-offset-2;
+  }
+
+  /* Danger button */
+  .btn-danger {
+    @apply bg-red-600 text-white px-4 py-2 rounded-md hover:bg-red-700 focus:outline-none focus:ring-2 focus:ring-red-500 focus:ring-offset-2;
+  }
+
+  /* Button sizes */
+  .btn-sm {
+    @apply text-sm px-3 py-1;
+  }
+
+  .btn-lg {
+    @apply text-lg px-5 py-3;
+  }
+
+  /* Form styles */
+  .form-input {
+    @apply w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500;
+  }
+
+  .form-input-valid {
+    @apply border-green-500 focus:ring-green-500 focus:border-green-500;
+  }
+
+  .form-feedback {
+    @apply mt-1 text-sm;
+  }
+
+  .form-feedback-valid {
+    @apply text-green-600;
+  }
+}
