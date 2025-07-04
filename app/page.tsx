@@ -5,7 +5,8 @@ import { useTranslations } from "next-intl";
 
 export default function Home() {
   const t = useTranslations();
-  const { info, success, error, notify } = useNotification();
+  // const { info, success, error, notify } = useNotification();
+  const { info } = useNotification();
   return (
     <div className="container mx-auto px-4 py-8">
       <LocaleSwitcherSelect />
