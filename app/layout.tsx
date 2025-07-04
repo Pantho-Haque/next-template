@@ -1,19 +1,9 @@
-import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
 import Providers from "@/context/providers";
+import type { Metadata } from "next";
 import { getLocale } from "next-intl/server";
+import { Geist, Geist_Mono } from "next/font/google";
 
-
-
-
-// Import global CSS first (which includes Tailwind directives)
-import "./globals.css";
-
-// Import component and layout specific styles
-// import "@/styles/app.css";
-// import "@/styles/demo.css";
-
-
+import "@/styles/app.css";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -42,9 +32,7 @@ export default async function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-       <Providers>
-        {children}
-        </Providers>
+        <Providers>{children}</Providers>
       </body>
     </html>
   );

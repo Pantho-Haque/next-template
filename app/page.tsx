@@ -1,11 +1,11 @@
+"use client";
 import { LocaleSwitcherSelect } from "@/components";
+import { useNotification } from "@/hooks";
 import { useTranslations } from "next-intl";
-
-import "@/styles/app.css"
-
 
 export default function Home() {
   const t = useTranslations();
+  const { info, success, error, notify } = useNotification();
   return (
     <div className="container mx-auto px-4 py-8">
       <LocaleSwitcherSelect />
@@ -16,7 +16,18 @@ export default function Home() {
         <p>{t("hello")}</p>
         <h2 className="text-2xl font-semibold mb-4">Button Components</h2>
         <div className="flex flex-wrap gap-3">
-          <button className="btn btn-primary">Primary Button</button>
+          <button
+            className="btn btn-primary"
+            onClick={() => {
+              info({
+                title: "info",
+                desc: "hi there i am info notification changes will make your notifications appear and disappear with a smoother, more professional-looking transition.",
+                position: "top-right",
+              });
+            }}
+          >
+            Primary Button
+          </button>
           <button className="btn btn-secondary">Secondary Button</button>
           <button className="btn btn-success">Success Button</button>
           <button className="btn btn-danger">Danger Button</button>
