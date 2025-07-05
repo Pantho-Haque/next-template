@@ -2,6 +2,7 @@
 import { LocaleSwitcherSelect } from "@/components";
 import { useNotification } from "@/hooks";
 import { useTranslations } from "next-intl";
+import Link from "next/link";
 
 export default function Home() {
   const t = useTranslations();
@@ -11,6 +12,13 @@ export default function Home() {
     <div className="container mx-auto px-4 py-8">
       <LocaleSwitcherSelect />
       <h1 className="text-3xl font-bold mb-6">Tailwind Components Demo</h1>
+
+      {/* Posts Link Button */}
+      <section className="mb-8">
+        <Link href="/posts">
+          <button className="btn btn-primary">View All Posts</button>
+        </Link>
+      </section>
 
       {/* Button Components */}
       <section className="mb-8">

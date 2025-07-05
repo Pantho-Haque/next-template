@@ -103,10 +103,10 @@ export default async function apiRequest(meta) {
 
     // Return both the response data and status
     return {
-      ...responseData,
-      status: response.status,
+      data:responseData,
       ok: response.ok,
-      statusText: response.statusText,
+      message: response.statusText,
+      status: response.status,
     };
   } catch (error) {
     console.error("API request failed:", error);
@@ -114,9 +114,9 @@ export default async function apiRequest(meta) {
     // Return a structured error response
     return {
       error: true,
+      ok: false,
       message: error.message || "Network request failed",
       status: 0,
-      ok: false,
     };
   }
 }
