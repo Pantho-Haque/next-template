@@ -3,7 +3,8 @@ import { LocaleSwitcherSelect } from "@/components";
 import { useNotification } from "@/hooks";
 import { useTranslations } from "next-intl";
 import Link from "next/link";
-
+import Image from "next/image";
+import { IMAGES } from "@/public/assets/images";
 export default function Home() {
   const t = useTranslations();
   // const { info, success, error, notify } = useNotification();
@@ -44,7 +45,7 @@ export default function Home() {
           <button className="btn btn-outline-primary">Outline Button</button>
         </div>
       </section>
-
+      <Image src={IMAGES.Spinner} alt="Spinner" width={100} height={100} />
       {/* Card Components */}
       <section className="mb-8">
         <h2 className="text-2xl font-semibold mb-4">Card Components</h2>

@@ -1,5 +1,10 @@
+import MENU_LINKS from "./menulinks";
+import PERMISSIONS from "./permissions";
+
 // All public constants
-export const  LOCALES={
-    ENGLISH:'en',
-    BANGLA:'bn'
-}
+const LOCALES = {
+  ENGLISH: "en",
+  BANGLA: "bn",
+};
+
+export { LOCALES, MENU_LINKS, PERMISSIONS };
