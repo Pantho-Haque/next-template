@@ -1,7 +1,6 @@
 "use client";
 
-import { getPostById } from "@/services/postServices";
-import { div } from "framer-motion/client";
+import { GetPostById } from "@/services/postServices";
 import Link from "next/link";
 import { useParams } from "next/navigation";
 
@@ -14,7 +13,7 @@ export default function SinglePost() {
       ? parseInt(id[0], 10)
       : 0;
 
-  const { data: post, isLoading, isError, error, isFetching } = getPostById(postId);
+  const { data: post, isLoading, isError, error, isFetching } = GetPostById(postId);
 
   if (isLoading || isFetching) {
     return (

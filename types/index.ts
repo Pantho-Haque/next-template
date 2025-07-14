@@ -8,6 +8,13 @@ import {
 
 import { TPost } from "./services";
 
+type TApiResponse<T> = {
+  data?: T;
+  message: string;
+  ok: boolean;
+  status: number;
+};
+
 export type {
   TNotificationContextType,
   TNotificationPosition,
@@ -15,4 +22,5 @@ export type {
   TNotificationType,
   TNotify,
   TPost,
+  TApiResponse,
 };

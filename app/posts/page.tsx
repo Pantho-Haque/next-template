@@ -1,11 +1,11 @@
 "use client";
 
-import { getPosts } from "@/services/postServices";
+import { GetPosts } from "@/services/postServices";
 import { TPost } from "@/types/services";
 import Link from "next/link";
 
 export default function Posts() {
-  const { data: posts, isLoading, isError, error, isFetching } = getPosts();
+  const { data: posts, isLoading, isError, error, isFetching } = GetPosts();
 
   if (isLoading || isFetching) {
     return (
