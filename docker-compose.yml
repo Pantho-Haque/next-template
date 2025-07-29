@@ -6,6 +6,8 @@ services:
       dockerfile: Dockerfile
     working_dir: /frontend
     command: sh dockerEntryPoint.sh
+    environment:
+      - DATABASE_URL=postgresql://postgres:password@postgres:5432/mydb?schema=public
     volumes:
       - source: .
         target: /frontend
@@ -22,6 +24,20 @@ services:
       - target: 9229
         published: 9229
         protocol: tcp
+    depends_on:
+      - postgres
+
+  postgres:
+    image: postgres:16
+    environment:
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=password
+      - POSTGRES_DB=mydb
+    ports:
+      - '5432:5432'
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
 
 volumes:
   frontend:
+  postgres_data:

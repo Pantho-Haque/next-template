@@ -108,7 +108,7 @@ main() {
   }
 }
 
-# Execution
+# local pc Execution
 pnpm install
 chmod +x .husky/pre-commit .husky/commit-msg
 main
